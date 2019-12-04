@@ -66,7 +66,10 @@ let main_content_h4 = document.querySelectorAll('h4');
 let main_content_text = document.querySelectorAll('.text-content');
 
 // middle-img
-const middle_img = document.getElementById('middle-img')
+const middle_img = document.getElementById('middle-img');
+
+// contact
+const contact = document.querySelector('.contact');
 
 
 // ::: ::: ::: Create Selectors ::: ::: ::: 
