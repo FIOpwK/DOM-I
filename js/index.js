@@ -45,7 +45,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Footer: Update the footer content 
 let footer = document.getElementsByTagName('footer');
-// footer.textContent = siteContent["footer"]["copyright"];
+footer.innerText = siteContent["footer"]["copyright"];
 
 
 // ::: ::: ::: Query Selectors ::: ::: :::
@@ -63,7 +63,7 @@ const cta_image = document.getElementById('cta-img');
 
 // main-content
 let main_content_h4 = document.querySelectorAll('h4');
-// let main_content_text = document.querySelectorAll('')
+let main_content_text = document.querySelectorAll('.text-content');
 
 // middle-img
 const middle_img = document.getElementById('middle-img')
@@ -115,6 +115,13 @@ main_content_h4[1].textContent = siteContent["main-content"]["about-h4"];
 main_content_h4[2].textContent = siteContent["main-content"]["services-h4"];
 main_content_h4[3].textContent = siteContent["main-content"]["product-h4"];
 main_content_h4[4].textContent = siteContent["main-content"]["vision-h4"];
+
+// main-content: p
+main_content_text[0].querySelector('p').textContent = siteContent["main-content"]["features-content"];
+main_content_text[1].querySelector('p').textContent = siteContent["main-content"]["about-content"];
+main_content_text[2].querySelector('p').textContent = siteContent["main-content"]["services-content"];
+main_content_text[3].querySelector('p').textContent = siteContent["main-content"]["product-content"];
+main_content_text[4].querySelector('p').textContent = siteContent["main-content"]["vision-content"];
 
 // contact: h4
 main_content_h4[5].textContent = siteContent["contact"]["contact-h4"];
