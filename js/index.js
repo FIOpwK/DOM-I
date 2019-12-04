@@ -41,15 +41,22 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-
+// Footer: Update the footer content 
+let footer = document.getElementsByTagName('footer');
+// footer.setAttribute('src', siteContent["footer"]["copyright"])
 
 
 // Query Selectors:
 // navigation
 const navigation = document.querySelectorAll('a');
 
+// header
+const header = document.querySelector('header');
+
 // cta
 const cta_h1 = document.querySelector('h1')
+// cta_h1.setAttribute( 'h1', siteContent["cta"]["h1"])
+
 const cta_button = document.querySelector('button');
 const cta_image = document.getElementById('cta-img');
 
@@ -67,10 +74,13 @@ let nav_item_3 = document.createTextNode('Features');
 let nav_item_4 = document.createTextNode('About');
 let nav_item_5 = document.createTextNode('Contact');
 
+
 // cta
 let cta_h1_text = document.createTextNode('DOM Is Awesome');
 let cta_button_text = document.createTextNode('Get Started');
 
+// main-content
+let main_content_h4 = document.querySelectorAll('h4');
 
 
 // Append Selectors:
@@ -81,6 +91,10 @@ navigation[3].appendChild(nav_item_3);
 navigation[2].appendChild(nav_item_2);
 navigation[1].appendChild(nav_item_1);
 
+// header: stretch
+header.style.backgroundColor = 'dodgerblue';
+header.style.borderRadius = '20px';
+
 // cta
 cta_h1.appendChild(cta_h1_text);
 cta_button.appendChild(cta_button_text);
@@ -88,6 +102,11 @@ cta_button.appendChild(cta_button_text);
 // Add new content:
 // navigation
 navigation.forEach(a => {a.style.color = 'green'})
+
+// navigation: stretch
+navigation.forEach(a => {a.style.fontWeight = 'bold'});
+navigation.forEach(a => {a.style.backgroundColor = '#f5f5f5'})
+navigation.forEach(a => {a.style.borderRadius = '20px'})
 
 // cta
 cta_image.setAttribute('src', siteContent["cta"]["img-src"])
