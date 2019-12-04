@@ -44,7 +44,6 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Query Selectors:
 const navigation = document.querySelectorAll('a');
-const cta_image = document.querySelectorAll('#cta-img', 'src')
 
 // Create Selectors:
 
@@ -57,4 +56,8 @@ let nav_item_5 = document.createTextNode('Contact');
 
 // Append Selectors
 
-navigation.forEach(el => {console.log(el); el.appendChild(nav_item_5)})
+navigation[5].appendChild(nav_item_5);
+navigation[4].appendChild(nav_item_4);
+navigation[3].appendChild(nav_item_3);
+navigation[2].appendChild(nav_item_2);
+navigation[1].appendChild(nav_item_1);
