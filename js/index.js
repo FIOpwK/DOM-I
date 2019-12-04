@@ -40,3 +40,21 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+// Query Selectors:
+const navigation = document.querySelectorAll('a');
+const cta_image = document.querySelectorAll('#cta-img', 'src')
+
+// Create Selectors:
+
+let nav_item_1 = document.createTextNode('Services');
+let nav_item_2 = document.createTextNode('Vision');
+let nav_item_3 = document.createTextNode('Features');
+let nav_item_4 = document.createTextNode('About');
+let nav_item_5 = document.createTextNode('Contact');
+
+
+// Append Selectors
+
+navigation.forEach(el => {console.log(el); el.appendChild(nav_item_5)})
