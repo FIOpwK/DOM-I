@@ -129,6 +129,11 @@ main_content_text[4].querySelector('p').textContent = siteContent["main-content"
 // contact: h4
 main_content_h4[5].textContent = siteContent["contact"]["contact-h4"];
 
+// contact: p
+contact.getElementsByTagName('p')[0].textContent = siteContent["contact"]["address"];
+contact.getElementsByTagName('p')[1].textContent = siteContent["contact"]["phone"];
+contact.getElementsByTagName('p')[2].textContent = siteContent["contact"]["email"];
+
 // navigation: stretch
 navigation.forEach(a => {a.style.fontWeight = 'bold'});
 navigation.forEach(a => {a.style.backgroundColor = '#f5f5f5'})
