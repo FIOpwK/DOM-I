@@ -72,6 +72,13 @@ const footer = document.querySelector('footer');
 
 
 // ::: ::: ::: Create Selectors ::: ::: ::: 
+
+// signup
+const signup = document.createElement('a');
+
+// login 
+const login = document.createElement('a');
+
 // navigation
 let nav_item_1 = document.createTextNode('Services');
 let nav_item_2 = document.createTextNode('Vision');
@@ -79,10 +86,13 @@ let nav_item_3 = document.createTextNode('Features');
 let nav_item_4 = document.createTextNode('About');
 let nav_item_5 = document.createTextNode('Contact');
 
+let sign_up = document.createTextNode('Signup');
+let log_in = document.createTextNode('Login');
 
 // ::: ::: ::: Append Selectors ::: ::: :::
 
 // navigation
+
 navigation[5].appendChild(nav_item_5);
 navigation[4].appendChild(nav_item_4);
 navigation[3].appendChild(nav_item_3);
@@ -93,7 +103,14 @@ navigation[1].appendChild(nav_item_1);
 
 
 
+
 // ::: ::: ::: Add new content ::: ::: :::
+
+// Signup: New link to nav
+
+
+// Login: New link to nav
+
 
 // navigation
 navigation.forEach(a => {a.style.color = 'green'})
