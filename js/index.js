@@ -63,6 +63,7 @@ const cta_image = document.getElementById('cta-img');
 
 // main-content
 let main_content_h4 = document.querySelectorAll('h4');
+// let main_content_text = document.querySelectorAll('')
 
 // middle-img
 const middle_img = document.getElementById('middle-img')
@@ -114,6 +115,9 @@ main_content_h4[1].textContent = siteContent["main-content"]["about-h4"];
 main_content_h4[2].textContent = siteContent["main-content"]["services-h4"];
 main_content_h4[3].textContent = siteContent["main-content"]["product-h4"];
 main_content_h4[4].textContent = siteContent["main-content"]["vision-h4"];
+
+// contact: h4
+main_content_h4[5].textContent = siteContent["contact"]["contact-h4"];
 
 // navigation: stretch
 navigation.forEach(a => {a.style.fontWeight = 'bold'});
