@@ -51,11 +51,13 @@ const navigation = document.querySelectorAll('a');
 // cta
 const cta_h1 = document.querySelector('h1')
 const cta_button = document.querySelector('button');
+const cta_image = document.getElementById('cta-img');
 
 // main-content
 
 // middle-img
 const middle_img = document.getElementById('middle-img')
+
 
 // Create Selectors:
 // navigation
@@ -88,6 +90,7 @@ cta_button.appendChild(cta_button_text);
 navigation.forEach(a => {a.style.color = 'green'})
 
 // cta
+cta_image.setAttribute('src', 'img/header-img.png')
 
 // main-content
 middle_img.setAttribute('src', 'img/mid-page-accent.jpg')
