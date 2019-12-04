@@ -44,8 +44,8 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 // ::: ::: ::: Code Changes Start Here ::: ::: ::: //
 
 // Footer: Update the footer content 
-let footer = document.getElementsByTagName('footer');
-footer.innerText = siteContent["footer"]["copyright"];
+// let footer = document.getElementsByTagName('footer');
+// footer.querySelector('p').textContent = siteContent["footer"]["copyright"];
 
 
 // ::: ::: ::: Query Selectors ::: ::: :::
@@ -70,6 +70,9 @@ const middle_img = document.getElementById('middle-img');
 
 // contact
 const contact = document.querySelector('.contact');
+
+// footer
+const footer = document.querySelector('footer');
 
 
 // ::: ::: ::: Create Selectors ::: ::: ::: 
@@ -144,3 +147,6 @@ cta_image.setAttribute('src', siteContent["cta"]["img-src"])
 
 // main-content
 middle_img.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+// footer
+footer.innerHTML = siteContent["footer"]["copyright"];
