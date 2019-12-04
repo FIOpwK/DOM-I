@@ -45,24 +45,42 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 // Query Selectors:
+// navigation
 const navigation = document.querySelectorAll('a');
 
-// Create Selectors:
+// cta
+const cta_h1 = document.querySelector('h1')
+const cta_button = document.querySelector('button');
 
+
+// Create Selectors:
+// navigation
 let nav_item_1 = document.createTextNode('Services');
 let nav_item_2 = document.createTextNode('Vision');
 let nav_item_3 = document.createTextNode('Features');
 let nav_item_4 = document.createTextNode('About');
 let nav_item_5 = document.createTextNode('Contact');
 
+// cta
+let cta_h1_text = document.createTextNode('DOM Is Awesome');
+let cta_button_text = document.createTextNode('Get Started');
 
-// Append Selectors
 
+
+// Append Selectors:
+// navigation
 navigation[5].appendChild(nav_item_5);
 navigation[4].appendChild(nav_item_4);
 navigation[3].appendChild(nav_item_3);
 navigation[2].appendChild(nav_item_2);
 navigation[1].appendChild(nav_item_1);
 
-// Add new content
+// cta
+cta_h1.appendChild(cta_h1_text);
+cta_button.appendChild(cta_button_text);
+
+// Add new content:
+// navigation
 navigation.forEach(a => {a.style.color = 'green'})
+
+// cta
