@@ -41,12 +41,15 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+// ::: ::: ::: Code Changes Start Here ::: ::: ::: //
+
 // Footer: Update the footer content 
 let footer = document.getElementsByTagName('footer');
-// footer.setAttribute('src', siteContent["footer"]["copyright"])
+// footer.textContent = siteContent["footer"]["copyright"];
 
 
-// Query Selectors:
+// ::: ::: ::: Query Selectors ::: ::: :::
+
 // navigation
 const navigation = document.querySelectorAll('a');
 
@@ -55,18 +58,17 @@ const header = document.querySelector('header');
 
 // cta
 const cta_h1 = document.querySelector('h1')
-// cta_h1.setAttribute( 'h1', siteContent["cta"]["h1"])
-
 const cta_button = document.querySelector('button');
 const cta_image = document.getElementById('cta-img');
 
 // main-content
+let main_content_h4 = document.querySelectorAll('h4');
 
 // middle-img
 const middle_img = document.getElementById('middle-img')
 
 
-// Create Selectors:
+// ::: ::: ::: Create Selectors ::: ::: ::: 
 // navigation
 let nav_item_1 = document.createTextNode('Services');
 let nav_item_2 = document.createTextNode('Vision');
@@ -79,17 +81,17 @@ let nav_item_5 = document.createTextNode('Contact');
 let cta_h1_text = document.createTextNode('DOM Is Awesome');
 let cta_button_text = document.createTextNode('Get Started');
 
-// main-content
-let main_content_h4 = document.querySelectorAll('h4');
 
 
-// Append Selectors:
+// ::: ::: ::: Append Selectors ::: ::: :::
+
 // navigation
 navigation[5].appendChild(nav_item_5);
 navigation[4].appendChild(nav_item_4);
 navigation[3].appendChild(nav_item_3);
 navigation[2].appendChild(nav_item_2);
 navigation[1].appendChild(nav_item_1);
+
 
 // header: stretch
 header.style.backgroundColor = 'dodgerblue';
@@ -99,9 +101,19 @@ header.style.borderRadius = '20px';
 cta_h1.appendChild(cta_h1_text);
 cta_button.appendChild(cta_button_text);
 
-// Add new content:
+
+
+// ::: ::: ::: Add new content ::: ::: :::
+
 // navigation
 navigation.forEach(a => {a.style.color = 'green'})
+
+// main-content: h4
+main_content_h4[0].textContent = siteContent["main-content"]["features-h4"];
+main_content_h4[1].textContent = siteContent["main-content"]["about-h4"];
+main_content_h4[2].textContent = siteContent["main-content"]["services-h4"];
+main_content_h4[3].textContent = siteContent["main-content"]["product-h4"];
+main_content_h4[4].textContent = siteContent["main-content"]["vision-h4"];
 
 // navigation: stretch
 navigation.forEach(a => {a.style.fontWeight = 'bold'});
