@@ -90,9 +90,6 @@ navigation[2].appendChild(nav_item_2);
 navigation[1].appendChild(nav_item_1);
 
 
-// header: stretch
-header.style.backgroundColor = 'dodgerblue';
-header.style.borderRadius = '20px';
 
 
 
@@ -129,10 +126,15 @@ contact.getElementsByTagName('p')[0].textContent = siteContent["contact"]["addre
 contact.getElementsByTagName('p')[1].textContent = siteContent["contact"]["phone"];
 contact.getElementsByTagName('p')[2].textContent = siteContent["contact"]["email"];
 
+
+// header: stretch
+header.style.backgroundColor = 'dodgerblue';
+header.style.borderRadius = '20px';
+
 // navigation: stretch
 navigation.forEach(a => {a.style.fontWeight = 'bold'});
-navigation.forEach(a => {a.style.backgroundColor = '#f5f5f5'})
-navigation.forEach(a => {a.style.borderRadius = '20px'})
+// navigation.forEach(a => {a.style.backgroundColor = '#f5f5f5'})
+// navigation.forEach(a => {a.style.borderRadius = '20px'})
 
 // cta
 cta_image.setAttribute('src', siteContent["cta"]["img-src"])
