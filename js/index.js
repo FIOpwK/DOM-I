@@ -90,7 +90,7 @@ cta_button.appendChild(cta_button_text);
 navigation.forEach(a => {a.style.color = 'green'})
 
 // cta
-cta_image.setAttribute('src', 'img/header-img.png')
+cta_image.setAttribute('src', siteContent["cta"]["img-src"])
 
 // main-content
-middle_img.setAttribute('src', 'img/mid-page-accent.jpg')
+middle_img.setAttribute('src', siteContent["main-content"]["middle-img-src"])
