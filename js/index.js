@@ -42,6 +42,8 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
+
+
 // Query Selectors:
 const navigation = document.querySelectorAll('a');
 
@@ -61,3 +63,6 @@ navigation[4].appendChild(nav_item_4);
 navigation[3].appendChild(nav_item_3);
 navigation[2].appendChild(nav_item_2);
 navigation[1].appendChild(nav_item_1);
+
+// Add new content
+navigation.forEach(a => {a.style.color = 'green'})
