@@ -73,18 +73,8 @@ const contact = document.querySelector('.contact');
 const footer = document.querySelector('footer');
 
 
-// signup
-// const sign_up_link = document.querySelector('a');
 
-// // login
-// const log_in_link = document.querySelector('a');
 // ::: ::: ::: Create Selectors ::: ::: ::: 
-
-// signup
-// const signup = document.createElement('a');
-
-// // login 
-// const login = document.createElement('a');
 
 // navigation
 let nav_item_1 = document.createTextNode('Services');
@@ -113,18 +103,17 @@ navigation[1].appendChild(nav_item_1);
 
 nav.appendChild(nav_item_6);
 nav.prepend(nav_item_7);
-// nav.querySelector('a').appendChild(log_in_link);
-
-
 
 
 // ::: ::: ::: Add new content ::: ::: :::
 
 // navigation
 navigation.forEach(a => {a.style.color = 'green'})
+nav_item_6.style.color = 'green';
+nav_item_6.style.fontWeight = 'bold';
+nav_item_7.style.fontWeight = 'bold';
+nav_item_7.style.color = 'green';
 
-
-// const newNavItem = document.querySelector('nav').querySelectorAll('a').appendChild(nav_item_6);
 
 // cta
 cta_h1.outerHTML = siteContent["cta"]["h1"];
@@ -160,7 +149,7 @@ header.style.borderRadius = '5px';
 
 // navigation: stretch
 navigation.forEach(a => {a.style.fontWeight = 'bold'});
-
+// nav.forEach(a => {a.style.fontWeight = 'bold'});
 
 // cta
 cta_image.setAttribute('src', siteContent["cta"]["img-src"])
