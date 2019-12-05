@@ -38,7 +38,7 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // ::: ::: ::: Code Changes Start Here ::: ::: ::: //
@@ -60,8 +60,8 @@ const cta_button = document.querySelector('button');
 const cta_image = document.getElementById('cta-img');
 
 // main-content
-let main_content_h4 = document.querySelectorAll('h4');
-let main_content_text = document.querySelectorAll('.text-content');
+const main_content_h4 = document.querySelectorAll('h4');
+const main_content_text = document.querySelectorAll('.text-content');
 
 // middle-img
 const middle_img = document.getElementById('middle-img');
@@ -77,11 +77,11 @@ const footer = document.querySelector('footer');
 // ::: ::: ::: Create Selectors ::: ::: ::: 
 
 // navigation
-let nav_item_1 = document.createTextNode('Services');
-let nav_item_2 = document.createTextNode('Vision');
-let nav_item_3 = document.createTextNode('Features');
-let nav_item_4 = document.createTextNode('About');
-let nav_item_5 = document.createTextNode('Contact');
+const nav_item_1 = document.createTextNode('Services');
+const nav_item_2 = document.createTextNode('Vision');
+const nav_item_3 = document.createTextNode('Features');
+const nav_item_4 = document.createTextNode('About');
+const nav_item_5 = document.createTextNode('Contact');
 
 const nav_item_6 = document.createElement('a');
 const nav_item_7 = document.createElement('a');
@@ -149,7 +149,6 @@ header.style.borderRadius = '5px';
 
 // navigation: stretch
 navigation.forEach(a => {a.style.fontWeight = 'bold'});
-// nav.forEach(a => {a.style.fontWeight = 'bold'});
 
 // cta
 cta_image.setAttribute('src', siteContent["cta"]["img-src"])
