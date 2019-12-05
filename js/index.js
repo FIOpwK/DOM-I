@@ -46,6 +46,8 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // ::: ::: ::: Query Selectors ::: ::: :::
 
+// nav
+const nav = document.querySelector('nav');
 // navigation
 const navigation = document.querySelectorAll('a');
 
@@ -94,13 +96,10 @@ let nav_item_5 = document.createTextNode('Contact');
 const nav_item_6 = document.createElement('a');
 const nav_item_7 = document.createElement('a');
 
-nav_item_6.text = 'Join';
-// nav_item_6 = document.createTextNode('Join');
+nav_item_6.textContent = 'Join';
+nav_item_7.textContent = 'Login';
 
-// const nav_item_7 = document.createTextNode('Login');
 
-// let sign_up = document.createTextNode('Join');
-// let log_in = document.createTextNode('Login');
 
 // ::: ::: ::: Append/Prepend Selectors ::: ::: :::
 
@@ -112,8 +111,8 @@ navigation[3].appendChild(nav_item_3);
 navigation[2].appendChild(nav_item_2);
 navigation[1].appendChild(nav_item_1);
 
-// navigation.appendChild(nav_item_6);
-// nav.prepend(nav_item_7);
+nav.appendChild(nav_item_6);
+nav.prepend(nav_item_7);
 // nav.querySelector('a').appendChild(log_in_link);
 
 
