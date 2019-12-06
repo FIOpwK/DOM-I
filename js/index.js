@@ -43,6 +43,9 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // ::: ::: ::: Code Changes Start Here ::: ::: ::: //
 
+//      ::: ::: ::: HEADER ::: ::: ::: 
+const header = document.querySelector('header').style.backgroundColor = '#1222';
+
 //      ::: ::: ::: NAVIGATION ::: ::: ::: 
 
 // navigation: update nav font styling and add nav-items to navigation
@@ -54,8 +57,8 @@ const nav_item_6 = document.createElement('a')
 const nav_item_7 = document.createElement('a')
 nav_item_6.textContent = 'Join';
 nav_item_7.textContent = 'Login';
-nav.appendChild(nav_item_6);
-nav.prepend(nav_item_7);
+nav.appendChild(nav_item_6).style.fontWeight = 'bold'; nav_item_6.style.color = 'green';
+nav.prepend(nav_item_7); nav_item_7.style.fontWeight = 'bold'; nav_item_7.style.color = 'green';
 
 
 //      ::: ::: ::: CTA ::: ::: :::
