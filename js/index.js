@@ -43,118 +43,62 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // ::: ::: ::: Code Changes Start Here ::: ::: ::: //
 
+//      ::: ::: ::: NAVIGATION ::: ::: ::: 
 
-// ::: ::: ::: Query Selectors ::: ::: :::
+// navigation: update nav font styling and add nav-items to navigation
+const navigation = document.querySelector('nav').querySelectorAll('a');
+navigation.forEach((a, index) => {a.text = siteContent["nav"][`nav-item-${index + 1}`], a.style.color = 'green'; a.style.fontWeight = 'bold';})
 
-// nav
 const nav = document.querySelector('nav');
-// navigation
-const navigation = document.querySelectorAll('a');
-
-// header
-const header = document.querySelector('header');
-
-// cta
-const cta_h1 = document.querySelector('h1')
-const cta_button = document.querySelector('button');
-const cta_image = document.getElementById('cta-img');
-
-// main-content
-const main_content_h4 = document.querySelectorAll('h4');
-const main_content_text = document.querySelectorAll('.text-content');
-
-// middle-img
-const middle_img = document.getElementById('middle-img');
-
-// contact
-const contact = document.querySelector('.contact');
-
-// footer
-const footer = document.querySelector('footer');
-
-
-
-// ::: ::: ::: Create Selectors ::: ::: ::: 
-
-// navigation
-const nav_item_1 = document.createTextNode('Services');
-const nav_item_2 = document.createTextNode('Vision');
-const nav_item_3 = document.createTextNode('Features');
-const nav_item_4 = document.createTextNode('About');
-const nav_item_5 = document.createTextNode('Contact');
-
-const nav_item_6 = document.createElement('a');
-const nav_item_7 = document.createElement('a');
-
+const nav_item_6 = document.createElement('a')
+const nav_item_7 = document.createElement('a')
 nav_item_6.textContent = 'Join';
 nav_item_7.textContent = 'Login';
-
-
-
-// ::: ::: ::: Append/Prepend Selectors ::: ::: :::
-
-// navigation
-
-navigation[5].appendChild(nav_item_5);
-navigation[4].appendChild(nav_item_4);
-navigation[3].appendChild(nav_item_3);
-navigation[2].appendChild(nav_item_2);
-navigation[1].appendChild(nav_item_1);
-
 nav.appendChild(nav_item_6);
 nav.prepend(nav_item_7);
 
 
-// ::: ::: ::: Add new content ::: ::: :::
+//      ::: ::: ::: CTA ::: ::: :::
+const cta_image = document.getElementById('cta-img').setAttribute('src', siteContent["cta"]["img-src"])
 
-// navigation
-navigation.forEach(a => {a.style.color = 'green'})
-nav_item_6.style.color = 'green';
-nav_item_6.style.fontWeight = 'bold';
-nav_item_7.style.fontWeight = 'bold';
-nav_item_7.style.color = 'green';
+// select button, h1 and image, update content for cta
+const cta_h1 = document.querySelector('h1').textContent = siteContent["cta"]["h1"];
+const cta_button = document.querySelector('button').textContent = siteContent["cta"]["button"];
 
+//      ::: ::: ::: MAIN-CONTENT ::: ::: ::: 
+const middle_img = document.getElementById('middle-img')
+middle_img.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
-// cta
-cta_h1.outerHTML = siteContent["cta"]["h1"];
-cta_button.innerHTML = siteContent["cta"]["button"];
-
-
-// main-content: h4
+// // main-content
+const main_content_h4 = document.querySelectorAll('h4');
+// // main-content: h4
 main_content_h4[0].textContent = siteContent["main-content"]["features-h4"];
 main_content_h4[1].textContent = siteContent["main-content"]["about-h4"];
 main_content_h4[2].textContent = siteContent["main-content"]["services-h4"];
 main_content_h4[3].textContent = siteContent["main-content"]["product-h4"];
 main_content_h4[4].textContent = siteContent["main-content"]["vision-h4"];
+main_content_h4[5].textContent = siteContent["contact"]["contact-h4"];
 
-// main-content: p
+// maint-content
+const main_content_text = document.querySelectorAll('.text-content');
+// // main-content: p
 main_content_text[0].querySelector('p').textContent = siteContent["main-content"]["features-content"];
 main_content_text[1].querySelector('p').textContent = siteContent["main-content"]["about-content"];
 main_content_text[2].querySelector('p').textContent = siteContent["main-content"]["services-content"];
 main_content_text[3].querySelector('p').textContent = siteContent["main-content"]["product-content"];
 main_content_text[4].querySelector('p').textContent = siteContent["main-content"]["vision-content"];
 
-// contact: h4
-main_content_h4[5].textContent = siteContent["contact"]["contact-h4"];
+//      ::: ::: ::: CONTACT ::: ::: :::
 
-// contact: p
+// // contact
+const contact = document.querySelector('.contact');
+
+// // contact: p
 contact.getElementsByTagName('p')[0].textContent = siteContent["contact"]["address"];
 contact.getElementsByTagName('p')[1].textContent = siteContent["contact"]["phone"];
 contact.getElementsByTagName('p')[2].textContent = siteContent["contact"]["email"];
 
 
-// header: stretch
-header.style.backgroundColor = 'dodgerblue';
-header.style.borderRadius = '5px';
-
-// navigation: stretch
-navigation.forEach(a => {a.style.fontWeight = 'bold'});
-
-// cta
-cta_image.setAttribute('src', siteContent["cta"]["img-src"])
-
-// main-content
-middle_img.setAttribute('src', siteContent["main-content"]["middle-img-src"])
-
-// footer
+//     ::: ::: ::: FOOTER ::: ::: ::: 
+const footer = document.querySelector('footer');
 footer.innerHTML = siteContent["footer"]["copyright"];
