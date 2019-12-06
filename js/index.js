@@ -42,7 +42,7 @@ const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // ::: ::: ::: Code Changes Start Here ::: ::: ::: //
-
+const container = document.querySelector('.container').style.backgroundColor = '#1023';
 //      ::: ::: ::: HEADER ::: ::: ::: 
 const header = document.querySelector('header').style.backgroundColor = '#1222';
 
@@ -63,6 +63,7 @@ nav.prepend(nav_item_7); nav_item_7.style.fontWeight = 'bold'; nav_item_7.style.
 
 //      ::: ::: ::: CTA ::: ::: :::
 const cta_image = document.getElementById('cta-img').setAttribute('src', siteContent["cta"]["img-src"])
+const cta_background = document.querySelector('.cta').style.backgroundColor = 'dodgerblue';
 
 // select button, h1 and image, update content for cta
 const cta_h1 = document.querySelector('h1').textContent = siteContent["cta"]["h1"];
